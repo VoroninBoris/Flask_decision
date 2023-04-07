@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title> CarService </title>
+    </head>
+    <style>
+        table, th, td {
+          border:2px solid black;
+        }
+        </style>
+    <body>
+      <div>
+        <h2>Список деталей в заказ-наряде</h2>
+        <p></p>
+        </div>
+        <table style="width:100%">
+            <tr>
+              <th> Номер записи </th>
+              <th> Время записи </th>
+              <th> Автомобиль </th>
+              <th> Наименование автокомпонента </th>
+            </tr>
+            {% for detail in change_list %}
+               <tr>
+                 <td>{{ detail[0] }}</td>
+                 <td>{{ detail[1] }}</td>
+                 <td>{{ detail[2] }}</td>
+                 <td>{{ detail[3] }}</td>
+                </tr>
+            {% endfor %}
+          </table>          
+    </body>
+</html>
